@@ -10,7 +10,7 @@ export const fetchNews = createAsyncThunk<Article[]>('news/fetchNews', async () 
 export const fetchArticleById = createAsyncThunk<Article, string>(
   'news/fetchArticleById',
   async (id: string) => {
-    const { data } = await axiosApi.get(`/news/${id}`);
+    const {data} = await axiosApi.get(`/news/${id}`);
     return data;
   }
 );
@@ -37,7 +37,7 @@ export const fetchComments = createAsyncThunk<Comment[], string | undefined>(
   'comments/fetchComments',
   async (articleId?: string) => {
     const response = await axiosApi.get('/comments', {
-      params: articleId ? { news_id: articleId } : {}
+      params: articleId ? {news_id: articleId} : {}
     });
     return response.data;
   }
@@ -45,8 +45,8 @@ export const fetchComments = createAsyncThunk<Comment[], string | undefined>(
 
 export const addComment = createAsyncThunk<Comment, { articleId: string; text: string; author?: string }>(
   'comments/addComment',
-  async ({ articleId, text, author }) => {
-    const commentData = { articleId, text, author: author || 'Anonymous' };
+  async ({articleId, text, author}) => {
+    const commentData = {articleId, text, author: author || 'Anonymous'};
     const response = await axiosApi.post('/comments', commentData);
     return response.data;
   }

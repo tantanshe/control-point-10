@@ -1,17 +1,16 @@
 import {useEffect} from 'react';
-import {useDispatch} from 'react-redux';
 import {fetchNews, deleteArticle} from '../app/thunks';
 import {selectNews, selectIsNewsLoading, selectError} from '../store/newsSlice';
 import {Link} from 'react-router-dom';
 import {Button, List, ListItem, Typography, CircularProgress, Box, CardMedia} from '@mui/material';
-import {useAppSelector} from '../app/hooks';
+import {useAppDispatch, useAppSelector} from '../app/hooks';
 import {AppDispatch} from '../app/store';
 import placeholder from '../assets/no-img.jpg';
 
 const placeholderImage = placeholder;
 
 const HomePage = () => {
-  const dispatch: AppDispatch = useDispatch();
+  const dispatch: AppDispatch = useAppDispatch();
   const news = useAppSelector(selectNews);
   const isLoading = useAppSelector(selectIsNewsLoading);
   const error = useAppSelector(selectError);

@@ -1,20 +1,22 @@
 import {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
 import {fetchComments, addComment, deleteComment, fetchArticleById} from '../app/thunks';
-import {AppDispatch, RootState} from '../app/store';
+import {AppDispatch} from '../app/store';
 import {Box, Typography, Button, CircularProgress, Divider, CardMedia, TextField} from '@mui/material';
 import {Link, useParams} from 'react-router-dom';
 import placeholder from '../assets/no-img.jpg';
+import {useAppDispatch, useAppSelector} from '../app/hooks';
+import {selectCurrentArticle} from '../store/newsSlice';
+import {selectComments, selectError, selectIsCommentsLoading} from '../store/commentsSlice';
 
 const placeholderImage = placeholder;
 
 const ArticlePage = () => {
-  const dispatch: AppDispatch = useDispatch();
+  const dispatch: AppDispatch = useAppDispatch();
   const {id} = useParams<{ id: string }>();
-  const currentArticle = useSelector((state: RootState) => state.news.currentArticle);
-  const comments = useSelector((state: RootState) => state.comments.comments);
-  const isLoading = useSelector((state: RootState) => state.news.isLoading || state.comments.isLoading);
-  const error = useSelector((state: RootState) => state.news.error || state.comments.error);
+  const currentArticle = useAppSelector(selectCurrentArticle);
+  const comments = useAppSelector(selectComments);
+  const isLoading = useAppSelector(selectIsCommentsLoading);
+  const error = useAppSelector((selectError));
 
   const [commentText, setCommentText] = useState('');
   const [commentAuthor, setCommentAuthor] = useState('');

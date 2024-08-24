@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import {useDispatch} from 'react-redux';
 import {addArticle} from '../app/thunks';
 import {TextField, Button, Typography} from '@mui/material';
 import FileInput from '../UI/FileInput/FileInput';
 import {AppDispatch} from '../app/store';
 import {useNavigate} from 'react-router-dom';
+import {useAppDispatch} from '../app/hooks';
 
 const AddArticle = () => {
-  const dispatch: AppDispatch = useDispatch();
+  const dispatch: AppDispatch = useAppDispatch();
   const navigate = useNavigate();
   const [state, setState] = useState({
     name: '',
