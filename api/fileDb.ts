@@ -31,11 +31,9 @@ const fileDb = {
 
   async addArticle(article: Article) {
     const id = crypto.randomUUID();
-    const datetime = new Date().toISOString();
     const newArticle = {
       id,
-      ...article,
-      datetime
+      ...article
     };
     news.push(newArticle);
     await this.saveNews();
