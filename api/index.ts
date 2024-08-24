@@ -7,7 +7,7 @@ import commentsRouter from './routers/comments';
 const app = express();
 const port = 8003;
 
-const whitelist = ['http://localhost:8003', 'http://localhost:5174'];
+const whitelist = ['http://localhost:8003', 'http://localhost:5173'];
 const corsOptions: CorsOptions = {
   origin: (origin, callback) => {
     if (!origin || whitelist.indexOf(origin) !== -1) {

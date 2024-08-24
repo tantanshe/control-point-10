@@ -6,8 +6,13 @@ const theme = createTheme({
       defaultProps: {
         variant: 'outlined',
         fullWidth: true,
-      }
-    }
+      },
+      styleOverrides: {
+        root: {
+          margin: '10px 0',
+        },
+      },
+    },
   }
 });
 

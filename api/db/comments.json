@@ -1,0 +1,44 @@
+[
+  {
+    "id": "4d1db21d-57c1-4977-ae68-a761a69182a4",
+    "articleId": "77a2c504-e771-4044-b699-2efd2cdd123c",
+    "author": "John Doe",
+    "text": "Great article!"
+  },
+  {
+    "id": "0742a6ba-3682-4937-a63f-df248875b948",
+    "articleId": "77a2c504-e771-4044-b699-2efd2cdd123c",
+    "author": "Jane Doe",
+    "text": "Can't wait!"
+  },
+  {
+    "id": "ff316358-5b6a-4805-820b-c18b2353230a",
+    "articleId": "9bab2f83-d051-46a0-810c-a11682fcf6db",
+    "author": "Anonymous",
+    "text": "I agree!"
+  },
+  {
+    "id": "527f6170-cdb6-4c66-9779-d8cd6d43f354",
+    "articleId": "9bab2f83-d051-46a0-810c-a11682fcf6db",
+    "author": "James Doe",
+    "text": "I don't think so..."
+  },
+  {
+    "id": "f38ea119-fc80-4159-a2bb-c65a599e2ded",
+    "articleId": "9bab2f83-d051-46a0-810c-a11682fcf6db",
+    "author": "Anonymous",
+    "text": "Okay..."
+  },
+  {
+    "id": "4f0346fe-9855-4b6c-8f31-f866d1f2c61d",
+    "articleId": "55b628ca-fc23-4bf9-84e3-e44dfee31c9b",
+    "author": "Sarah Doe",
+    "text": "I need to think about this"
+  },
+  {
+    "id": "8d5623aa-1c5b-4666-90a3-e1735f69846a",
+    "articleId": "55b628ca-fc23-4bf9-84e3-e44dfee31c9b",
+    "author": "Anonymous",
+    "text": "Well..."
+  }
+]
